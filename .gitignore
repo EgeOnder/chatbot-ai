@@ -130,6 +130,7 @@ dmypy.json
 
 # AI stuff
 checkpoint
-.pickle
-.index
-.meta
+data.pickle
+model.tflearn.index
+model.tflearn.meta
+.idea/
