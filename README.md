@@ -5,11 +5,10 @@
   * Clone this repository to your computer by either downloading or using ```git clone https://github.com/EgeOnder/chatbot-ai.git```
   * Create a ```models``` file in the repository folder.
   * Install all the dependencies below: ( pip install ... etc. )
-    1. TensorFlow <= 1.14
-    2. TFLearn
-    3. numpy
-    4. nltk
-    **!** You **NEED** Python 3.6 to run this project.
+    - TensorFlow <= 1.14
+    - TFLearn
+    - numpy
+    - nltk
   * Train your model with ```python main.py``` or ```python3 main.py```
   * When you are done, you can speak with the bot.
 
