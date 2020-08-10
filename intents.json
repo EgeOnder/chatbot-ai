@@ -1,0 +1,35 @@
+{
+  "intents":
+  [
+    {
+      "tag": "greeting",
+      "patterns": [ "selam", "merhaba", "naber", "nasılsın", "iyi günler", "iyi akşamlar", "kolay gelsin" ],
+      "responses": [ "Merhaba!", "Selam!", "Seni görmek ne güzel!", "Merhaba, nasıl yardımcı olabilirim?" ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [ "görüşürüz", "görüşmek üzere", "bay bay", "bb", "bye", "by", "kendine iyi bak", "hoşçakal" ],
+      "responses": [ "Görüşürüz!", "Görüşmek üzere.", "Gittiğine üzüldüm :(", "Kendine iyi bak." ],
+      "context_set": ""
+    },
+    {
+      "tag": "introduce",
+      "patterns": [ "kimsin", "sen kimsin", "adın ne" ],
+      "responses": [ "Bana BOT diyebilirsin.", "Adım BOT.", "Adım BOT, tanıştığımıza sevindim." ],
+      "context_set": ""
+    },
+    {
+      "tag": "cafe",
+      "patterns": [ "menüde neler var", "menü", "menüye nereden ulaşabilirim", "nasıl menü", "menüyü göster" ],
+      "responses": [ "Menüye 'https://istasyoncikolata.com/menu' adresinden ulaşabilirsin." ],
+      "context_set": ""
+    },
+    {
+      "tag": "open",
+      "patterns": [ "ne zaman açıksınız", "açıksınız", "hangi saatler arası", "açık zaman" ],
+      "responses": [ "Normal koşullarda 9'dan 12'ye kadar açığız." ],
+      "context_set": ""
+    }
+  ]
+}
