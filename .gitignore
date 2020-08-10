@@ -134,3 +134,4 @@ data.pickle
 model.tflearn.index
 model.tflearn.meta
 .idea/
+models/

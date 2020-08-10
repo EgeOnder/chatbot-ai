@@ -13,7 +13,7 @@ with open("intents.json") as file:
     data = json.load(file)
 
 try:
-    with open("data.pickle", "rb") as f:
+    with open("models/data.pickle", "rb") as f:
         words, labels, training, output = pickle.load(f)
 except:
     words = []
@@ -58,7 +58,7 @@ except:
     training = np.array(training)
     output = np.array(output)
 
-    with open("data.pickle", "wb") as f:
+    with open("models/data.pickle", "wb") as f:
         pickle.dump((words, labels, training, output), f)
 
 tf.reset_default_graph()
@@ -72,10 +72,15 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 try:
-    model.load("model.tflearn")
+    model.load("models/model.tflearn")
 except:
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("model.tflearn")
+    model.save("models/model.tflearn")
+
+'''
+model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+model.save("models/model.tflearn")
+'''
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
@@ -102,8 +107,7 @@ def chat():
         tag = labels[results_index]
 
         responses = [ "Söylediğini tam olarak anlayamadım. Tekrar dener misin?",
-                      "Maalesef aklım söylediklerini anlamaya yetmiyor. Daha basit sorular sorar mısın.",
-                      "Ben biraz aptalım. Bana daha kolay sorularla gel." ]
+                      "Maalesef aklım söylediklerini anlamaya yetmiyor. Daha basit sorular sorar mısın." ]
 
         if results[results_index] > 0.6:
             for tg in data["intents"]:
